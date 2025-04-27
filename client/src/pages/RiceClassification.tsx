@@ -26,7 +26,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 }
 };
 
-const serverLink = "http://127.0.0.1:5000";
+const serverLink = "https://riceimageweb.onrender.com";
 const classNames = ['Arborio', 'Basmati', 'Ipsala', 'Jasmine', 'Karacadag'];
 
 const RiceClassification: React.FC = () => {
@@ -95,7 +95,7 @@ const RiceClassification: React.FC = () => {
           "Content-Type": "multipart/form-data",
           "Accept": "application/json"
         },
-        timeout: 30000 // 30 second timeout
+        timeout: 60000 // 30 second timeout
       });
 
       const { predicted_class, confidence_score } = response.data;

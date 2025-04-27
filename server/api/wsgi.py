@@ -1,4 +1,4 @@
-from app import app
+from main import app  
 
-# Some servers expect the variable to be named 'application'
-application = app
+if __name__ == "__main__":
+    app.run()
