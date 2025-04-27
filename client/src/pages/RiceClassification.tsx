@@ -27,7 +27,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 }
 };
 
-const serverLink = "http://127.0.0.1:5000";
+const serverLink = "https://riceimageweb.onrender.com";
 const classNames = ['Arborio', 'Basmati', 'Ipsala', 'Jasmine', 'Karacadag'];
 
 const RiceClassification: React.FC = () => {
