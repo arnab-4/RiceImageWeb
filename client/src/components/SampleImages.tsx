@@ -1,11 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 // Import local images from assets folder
 import IpsalaImg from '../assets/Ipsala (10049).jpg';
 import BasmatiImg from '../assets/Basmati (1).jpg';
 import JasmineImg from '../assets/Jasmine (10003).jpg';
-
 interface SampleImage {
   id: number;
   name: string;
@@ -21,22 +19,22 @@ const SampleImages: React.FC<SampleImagesProps> = ({ onSampleSelect }) => {
   const sampleImages: SampleImage[] = [
     {
       id: 1,
-      name: 'Ipsala Rice',
+      name: 'Arborio Rice',
       asset: IpsalaImg,
-      type: 'Ipsala',
+      type: 'Arborio'
     },
     {
       id: 2,
       name: 'Basmati Rice',
       asset: BasmatiImg,
-      type: 'Basmati',
+      type: 'Basmati'
     },
     {
       id: 3,
       name: 'Jasmine Rice',
       asset: JasmineImg,
-      type: 'Jasmine',
-    },
+      type: 'Jasmine'
+    }
   ];
 
   return (

@@ -43,11 +43,13 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageSelect }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="mb-8"
+      className="mb-12"
     >
       <div
-        className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors ${
-          isDragging ? 'border-green-500 bg-green-50' : 'border-gray-300'
+        className={`border-3 border-dashed rounded-2xl p-10 text-center transition-all duration-300 ${
+          isDragging 
+            ? 'border-green-500 bg-green-50 shadow-lg scale-102' 
+            : 'border-gray-300 hover:border-green-400 hover:shadow-md'
         }`}
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
@@ -65,23 +67,23 @@ const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageSelect }) => {
           className="cursor-pointer flex flex-col items-center"
         >
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mb-4"
+            whileHover={{ scale: 1.1, rotate: 180 }}
+            transition={{ duration: 0.3 }}
+            className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center mb-6 shadow-lg"
           >
             {isDragging ? (
-              <ImageIcon className="h-8 w-8 text-green-500" />
+              <ImageIcon className="h-10 w-10 text-white" />
             ) : (
-              <Upload className="h-8 w-8 text-green-500" />
+              <Upload className="h-10 w-10 text-white" />
             )}
           </motion.div>
-          <h3 className="text-lg font-medium text-gray-700 mb-1">
+          <h3 className="text-2xl font-bold text-gray-800 mb-2">
             {isDragging ? 'Drop your image here' : 'Upload an image'}
           </h3>
-          <p className="text-sm text-gray-500 mb-4">
+          <p className="text-lg text-gray-600 mb-4">
             Drag & drop or click to browse
           </p>
-          <p className="text-xs text-gray-400">
+          <p className="text-sm text-gray-500 bg-gray-100 px-4 py-2 rounded-full">
             Supports: JPG, PNG, WEBP (Max 5MB)
           </p>
         </label>
