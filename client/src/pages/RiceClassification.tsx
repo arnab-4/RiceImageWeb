@@ -95,7 +95,7 @@ const RiceClassification: React.FC = () => {
           "Content-Type": "multipart/form-data",
           "Accept": "application/json"
         },
-        timeout: 60000 // 30 second timeout
+        timeout: 30000 // 30 second timeout
       });
 
       const { predicted_class, confidence_score } = response.data;

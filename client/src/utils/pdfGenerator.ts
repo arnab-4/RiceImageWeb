@@ -99,7 +99,7 @@ export const generatePDF = async ({
       ['Rice Variety', prediction],
       ['Confidence', `${(confidence * 100).toFixed(2)}%`],
       ['Analysis Method', 'Convolutional Neural Network'],
-      ['Model Version', 'RiceNet v2.1']
+      ['Model Version', 'RiceNet v1']
     ],
     theme: 'grid',
     headStyles: { fillColor: [74, 222, 128], textColor: [0, 0, 0] },
