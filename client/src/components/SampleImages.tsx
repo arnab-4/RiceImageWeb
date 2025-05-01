@@ -19,9 +19,9 @@ const SampleImages: React.FC<SampleImagesProps> = ({ onSampleSelect }) => {
   const sampleImages: SampleImage[] = [
     {
       id: 1,
-      name: 'Arborio Rice',
+      name: 'Ipsala Rice',
       asset: IpsalaImg,
-      type: 'Arborio'
+      type: 'Ipsala'
     },
     {
       id: 2,
